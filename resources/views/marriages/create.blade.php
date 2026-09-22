@@ -85,7 +85,7 @@
                 </p>
             </div>
 
-            <form action="{{ route('marriages.store') }}" method="POST">
+            <form action="{{ route('admin.marriages.store') }}" method="POST">
                 @csrf
 
                 @if($individual->gender == 'male')

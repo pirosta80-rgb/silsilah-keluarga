@@ -43,6 +43,9 @@ Route::post('/panel-admin/logout', [AdminAuthController::class, 'logout'])->name
 // ============================================
 Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
 
+    // Dashboard Admin
+    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+
     // CRUD Individuals
     Route::get('/individuals', [IndividualController::class, 'index'])->name('individuals.index');
     Route::get('/individuals/create', [IndividualController::class, 'create'])->name('individuals.create');

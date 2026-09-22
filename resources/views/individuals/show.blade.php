@@ -339,7 +339,7 @@
                 <div class="flex justify-between items-start flex-wrap gap-3">
                     <div class="flex-1">
                         <div class="text-white/50 text-sm">Suami</div>
-                        <a href="{{ route('individuals.show', $marriage->husband) }}"
+                        <a href="{{ route('admin.individuals.show', $marriage->husband) }}"
                            class="text-white font-medium text-lg hover:text-white/80 transition-colors">
                             {{ $marriage->husband->full_name }}
                         </a>
@@ -407,7 +407,7 @@
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 @foreach($children as $child)
-                <a href="{{ route('individuals.show', $child) }}"
+                <a href="{{ route('admin.individuals.show', $child) }}"
                    class="relation-card text-center hover:scale-105 transition-all duration-300">
                     <div class="text-4xl mb-2">{{ $child->gender == 'male' ? '👦' : '👧' }}</div>
                     <div class="text-white font-medium">{{ $child->full_name }}</div>

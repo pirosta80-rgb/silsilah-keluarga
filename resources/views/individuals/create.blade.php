@@ -69,13 +69,13 @@
                     <h1 class="text-3xl font-bold text-white">➕ Tambah Anggota</h1>
                     <p class="text-white/60 text-sm mt-1">Masukkan data anggota keluarga baru</p>
                 </div>
-                <a href="{{ route('individuals.index') }}"
+                <a href="{{ route('admin.individuals.index') }}"
                    class="text-white/60 hover:text-white transition-colors px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20">
                     ⬅ Kembali
                 </a>
             </div>
 
-            <form action="{{ route('individuals.store') }}" method="POST">
+            <form action="{{ route('admin.individuals.store') }}" method="POST">
                 @csrf
 
                 <!-- Data Diri -->
@@ -169,7 +169,7 @@
 
                 <!-- Tombol -->
                 <div class="flex justify-end gap-3 mt-8">
-                    <a href="{{ route('individuals.index') }}"
+                    <a href="{{ route('admin.individuals.index') }}"
                        class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all duration-300">
                         Batal
                     </a>

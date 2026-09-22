@@ -65,7 +65,7 @@
                     <h1 class="text-3xl font-bold text-white">✏️ Edit Pernikahan</h1>
                     <p class="text-white/60 text-sm mt-1">Perbarui data pernikahan</p>
                 </div>
-                <a href="{{ route('individuals.show', $marriage->husband_id) }}"
+                <a href="{{ route('admin.individuals.show', $marriage->husband_id) }}"
                    class="text-white/60 hover:text-white transition-colors px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20">
                     ⬅ Kembali
                 </a>
@@ -79,7 +79,7 @@
                 </p>
             </div>
 
-            <form action="{{ route('marriages.update', $marriage) }}" method="POST">
+            <form action="{{ route('admin.marriages.update', $marriage) }}" method="POST">
                 @csrf
                 @method('PUT')
 
@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="flex justify-end gap-3 mt-8">
-                    <a href="{{ route('individuals.show', $marriage->husband_id) }}"
+                    <a href="{{ route('admin.individuals.show', $marriage->husband_id) }}"
                        class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all duration-300">
                         Batal
                     </a>
